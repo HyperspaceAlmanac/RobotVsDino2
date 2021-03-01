@@ -8,7 +8,6 @@ namespace RobotVersusDinosaursGame
 {
     class Herd: ICanTakeAction, ICanSelectUnits
     {
-        protected int advantageValue;
         protected List<Dinosaur> dinosaurs;
 
         public int ArmyPriorityValue()

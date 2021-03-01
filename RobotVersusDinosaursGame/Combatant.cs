@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
+    enum CombatantState
+    {
+        Waiting,
+        ExecutingMove,
+        Recovery
+    }
     abstract class Combatant
     {
         // Actions that the class can do
@@ -14,6 +20,7 @@ namespace RobotVersusDinosaursGame
 
         protected bool isIncapacitated;
         protected int health;
+        protected int initiative;
 
         public Combatant(SelfAction[] ownActions, TargettingAction[] targetActions, int health)
         {

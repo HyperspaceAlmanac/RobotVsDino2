@@ -18,7 +18,12 @@ namespace RobotVersusDinosaursGame
         MoreDamage,
         LessDmage,
         MoreResource,
-        LessResource
+        LessResource,
+        MoreEnergy,
+        LessEnergy,
+        StrongHealing,
+        StrongResupply,
+        ChanceToNotConsumeResource
     }
 
     enum Status
@@ -39,6 +44,7 @@ namespace RobotVersusDinosaursGame
         protected string name;
         protected string description;
         protected int speed;
+        protected Tuple<bool, int> cancelAndPenalty;
 
         public Action(Combatant combatant)
         {
