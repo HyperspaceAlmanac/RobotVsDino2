@@ -12,7 +12,12 @@ namespace RobotVersusDinosaursGame
         TargetAbnormalStatus,
         BatteryCharges,
         BallisticAmmo,
-        FuelCell
+        FuelCell,
+
+        // For passives
+        Always,
+        OnAttack,
+        OnDefense
     }
     class Condition
     {

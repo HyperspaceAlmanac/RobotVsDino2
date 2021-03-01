@@ -10,7 +10,15 @@ namespace RobotVersusDinosaursGame
         Heal,
         Attack,
         Defend,
-        Utility
+        Utility,
+
+        // For skill randomization
+        BetterInitiative,
+        WorseInitiative,
+        MoreDamage,
+        LessDmage,
+        MoreResource,
+        LessResource
     }
 
     enum Status
