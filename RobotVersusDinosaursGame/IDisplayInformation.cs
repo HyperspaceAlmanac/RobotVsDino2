@@ -10,6 +10,6 @@ namespace RobotVersusDinosaursGame
     interface IDisplayInformation
     {
         int StatusNumberOfLines();
-        void DisplayStatusLine(int line);
+        int DisplayStatusLine(int line);
     }
 }

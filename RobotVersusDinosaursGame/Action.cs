@@ -20,7 +20,10 @@ namespace RobotVersusDinosaursGame
         Stun,
         Blind,
         Enraged,
-        Defensive
+        Defensive,
+        StaminaDamage,
+        DestroyAmmo,
+        DestroyFuelCell,
     }
     class Action
     {
