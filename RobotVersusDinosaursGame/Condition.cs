@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace RobotVersusDinosaursGame
 {
     enum ConditionType{
-
+        StaminaAboveValue,
+        EnergyAboveValue,
+        TargetAbnormalStatus,
     }
     class Condition
     {

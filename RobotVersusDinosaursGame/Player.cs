@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    class Player
+    class Player : CanTakeAction
     {
+        protected CanTakeAction army;
+        
+        public Player(CanTakeAction army)
+        {
+            this.army = army;
+        }
     }
 }
