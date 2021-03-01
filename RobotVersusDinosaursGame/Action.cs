@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    enum ActionType{
+    enum ActionDescription{
         Heal,
         Attack,
         Defend,
@@ -16,6 +16,7 @@ namespace RobotVersusDinosaursGame
     enum Status
     {
         None,
+        Damage,
         Stun,
         Blind,
         Enraged,

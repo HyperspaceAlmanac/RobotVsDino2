@@ -8,26 +8,33 @@ namespace RobotVersusDinosaursGame
 {
     class SelfAction : Action
     {
-        protected ActionType actionType;
+        protected ActionDescription actionType;
         protected Status actionStatus;
         protected int actionValue;
         protected List<Condition> conditions;
 
-        public SelfAction(Combatant combatant, int speed, ActionType actionType, Status actionStatus, int value, List<Condition> conditions) : base(combatant)
+        public SelfAction(Combatant combatant, int speed, ActionDescription actionType, Status actionStatus, int value, List<Condition> conditions) : base(combatant)
         {
             this.speed = speed;
             this.actionType = actionType;
             this.actionStatus = actionStatus;
             actionValue = value;
+            this.conditions = conditions;
         }
 
-        public bool CanPerformAction()
+        public List<Condition> GetConditions()
         {
-            return false;
+            return conditions;
         }
 
-        public void PerformAction()
+        public ActionDescription ActionType
         {
+            get;
+        }
+
+        public Status ActionStatus
+        {
+            get;
         }
     }
 }
