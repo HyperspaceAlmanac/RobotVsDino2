@@ -10,6 +10,7 @@ namespace RobotVersusDinosaursGame
         StaminaAboveValue,
         EnergyAboveValue,
         TargetAbnormalStatus,
+        EnoughChargesLeft
     }
     class Condition
     {

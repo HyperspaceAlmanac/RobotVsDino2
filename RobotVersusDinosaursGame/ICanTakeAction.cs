@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    interface CanTakeAction
+    interface ICanTakeAction
     {
+        void PickAction(PlayerInputStatus status, ICanTakeAction otherArmy);
+        
+        int ArmyPriorityValue();
     }
 }

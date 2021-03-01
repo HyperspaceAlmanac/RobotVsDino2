@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    interface DisplayInformation
+    interface ICanSelectUnits
     {
+        void SelectUnits();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    class Combatant : DisplayInformation
+    class Combatant : IDisplayInformation
     {
     }
 }

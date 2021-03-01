@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    class Herd
+    class Herd: ICanTakeAction, ICanSelectUnits
     {
+        protected int advantageValue;
+        protected List<Dinosaur> dinosaurs;
+
+        public int ArmyPriorityValue()
+        {
+            return advantageValue;
+        }
     }
 }

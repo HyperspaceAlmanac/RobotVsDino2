@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    class Fleet
+    class Fleet : ICanTakeAction, ICanSelectUnits
     {
+        protected Robot[] robots;
     }
 }
