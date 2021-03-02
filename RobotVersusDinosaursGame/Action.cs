@@ -26,7 +26,7 @@ namespace RobotVersusDinosaursGame
         ChanceToNotConsumeResource
     }
 
-    enum Status
+    enum Effect
     {
         None,
         Damage,
@@ -37,6 +37,7 @@ namespace RobotVersusDinosaursGame
         StaminaDamage,
         DestroyAmmo,
         DestroyFuelCell,
+        Stealth
     }
     class Action
     {
@@ -44,7 +45,6 @@ namespace RobotVersusDinosaursGame
         protected string name;
         protected string description;
         protected int speed;
-        protected Tuple<bool, int> cancelAndPenalty;
         protected List<Condition> conditions;
 
         public Action(Combatant combatant)

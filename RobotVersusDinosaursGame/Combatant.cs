@@ -10,7 +10,6 @@ namespace RobotVersusDinosaursGame
     {
         Vanguard,
         Support,
-        Healer,
         Assault
     }
     enum CombatantState
@@ -28,6 +27,7 @@ namespace RobotVersusDinosaursGame
         protected bool isIncapacitated;
         protected int health;
         protected int initiative;
+        protected Tuple<Effect, int, int>[] status;
 
         public Combatant(SelfAction[] ownActions, TargettingAction[] targetActions, int health)
         {

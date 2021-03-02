@@ -9,14 +9,14 @@ namespace RobotVersusDinosaursGame
     class TargettingAction : Action
     {
         protected ActionDescription actionType;
-        protected Tuple<Status, int> selfStatus;
-        protected Tuple<Status, int> otherStatus;
+        protected Tuple<Effect, int, int> selfEffect;
+        protected Tuple<Effect, int, int> otherEffect;
         protected List<Condition> selfConditions;
         protected List<Condition> otherConditions;
 
         public TargettingAction(Combatant combatant, int speed, ActionDescription actionType, int value,
             List<Condition> selfConditions, List<Condition> otherConditions,
-            Status selfStatus, int selfValue, Status otherStatus, int otherValue) : base(combatant)
+            Effect selfStatus, int selfValue, Effect otherStatus, int otherValue) : base(combatant)
         {
             this.speed = speed;
             this.actionType = actionType;

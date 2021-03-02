@@ -14,6 +14,13 @@ namespace RobotVersusDinosaursGame
         BallisticAmmo,
         FuelCell,
 
+        // Targetting
+        Opponent,
+        Ally,
+        // AOE
+        AllAlly,
+        AllEnemy,
+
         // For passives
         Always,
         OnAttack,

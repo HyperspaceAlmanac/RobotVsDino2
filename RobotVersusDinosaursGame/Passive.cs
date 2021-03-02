@@ -15,10 +15,11 @@ namespace RobotVersusDinosaursGame
         protected int duration;
         protected Condition[] conditions;
         protected Status status;
+        protected int value;
         protected ActionDescription actionType;
 
         public Passive(string name, string description, int cooldown, int duration,
-            Condition[] conditions, Status status, ActionDescription actionType)
+            Condition[] conditions, Status status, int value, ActionDescription actionType)
         {
             this.name = name;
             this.description = description;
@@ -30,6 +31,7 @@ namespace RobotVersusDinosaursGame
             }
             this.status = status;
             this.actionType = actionType;
+            this.value = value;
         }
 
         public string Name
@@ -66,5 +68,6 @@ namespace RobotVersusDinosaursGame
         public Condition[] Conditions { get; }
         public Status Status { get; }
         public ActionDescription ActionType { get; }
+        public int Value { get; }
     }
 }
