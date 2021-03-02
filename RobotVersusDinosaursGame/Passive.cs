@@ -10,12 +10,61 @@ namespace RobotVersusDinosaursGame
     {
         protected string name;
         protected string description;
+        protected int currentDuration;
         protected bool isActive;
-        protected int cooldown;
         protected int duration;
-        protected int current;
-        protected Condition condition;
+        protected Condition[] conditions;
         protected Status status;
-        protected ActionDescription actionDescription;
+        protected ActionDescription actionType;
+
+        public Passive(string name, string description, int cooldown, int duration,
+            Condition[] conditions, Status status, ActionDescription actionType)
+        {
+            this.name = name;
+            this.description = description;
+            currentDuration = duration;
+            this.conditions = new Condition[conditions.Length];
+            for (int i = 0; i < conditions.Length; i++)
+            {
+                this.conditions[i] = conditions[i];
+            }
+            this.status = status;
+            this.actionType = actionType;
+        }
+
+        public string Name
+        {
+            get;
+        }
+        public string Description
+        {
+            get;
+        }
+        public void TriggerPassive() {
+            isActive = true;
+            currentDuration = duration;
+        }
+
+        public void OneStep()
+        {
+            if (isActive)
+            {
+                if (currentDuration > 0)
+                {
+                    currentDuration -= 1;
+                }
+                else
+                {
+                    isActive = false;
+                }
+            }
+        }
+
+        public int CurrentDuration { get; }
+        public bool IsActive { get; }
+        public int Duration { get; }
+        public Condition[] Conditions { get; }
+        public Status Status { get; }
+        public ActionDescription ActionType { get; }
     }
 }

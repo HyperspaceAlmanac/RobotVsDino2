@@ -11,7 +11,6 @@ namespace RobotVersusDinosaursGame
         protected ActionDescription actionType;
         protected Status actionStatus;
         protected int actionValue;
-        protected List<Condition> conditions;
 
         public SelfAction(Combatant combatant, int speed, ActionDescription actionType, Status actionStatus, int value, List<Condition> conditions) : base(combatant)
         {

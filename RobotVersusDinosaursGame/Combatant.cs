@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
+    enum CombatantClass
+    {
+        Vanguard,
+        Support,
+        Healer,
+        Assault
+    }
     enum CombatantState
     {
         Waiting,

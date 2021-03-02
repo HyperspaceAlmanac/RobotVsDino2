@@ -45,6 +45,7 @@ namespace RobotVersusDinosaursGame
         protected string description;
         protected int speed;
         protected Tuple<bool, int> cancelAndPenalty;
+        protected List<Condition> conditions;
 
         public Action(Combatant combatant)
         {

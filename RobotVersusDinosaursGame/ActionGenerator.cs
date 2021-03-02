@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace RobotVersusDinosaursGame
 {
-    public static class ActionGenerator
+    class ActionGenerator
     {
-        static Random rand = new Random(100);
+        private Random rand;
 
-        static void GenerateVanguardDinoAction()
+        public ActionGenerator()
+        {
+            rand = new Random();
+            // Populate tables
+
+        }
+
+        public SelfAction GenerateDinoSelfAction(CombatantClass specialty)
         {
         }
-        static void GenerateAssaultDinoAction()
+        public TargettingAction GenerateDinoTargettingAction(CombatantClass specialty)
         {
         }
-        static void GenerateSupportDinoAction()
+        public SelfAction GenerateRobotSelfAction(CombatantClass specialty)
         {
         }
-        static void GenerateVanguardRobotAction()
+        public TargettingAction GenerateRobotTargettingAction(CombatantClass specialty)
         {
         }
-        static void GenerateAssaultRobotAction()
+        public Passive[] GenerateRobotPassives(CombatantClass specialty)
         {
         }
-        static void GenerateSupportRobotAction()
+        public Passive[] GenerateDinoPassives(CombatantClass specialty)
         {
         }
 
